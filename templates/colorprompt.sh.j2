@@ -75,8 +75,8 @@ On_ICyan='\[\e[106m\]'    # Cyan
 On_IWhite='\[\e[107m\]'   # White
 
 if [ -n "$BASH_VERSION" ]; then
-	schema="{{color_prompt_schema}}"
-	addon="{{color_prompt_addon}}"
+	schema="{{ color_prompt_schema }}"
+	addon="{{ color_prompt_addon }}"
 	case $schema in
 {% for schema, colors in color_prompt_schemas.items() %}
 		{{ schema }})
