@@ -1,0 +1,14 @@
+---
+# defaults file for color-prompt, override in your host_vars or group_vars
+
+# file that is read by bash profile
+color_prompt_target_file: /etc/profile.d/colorprompt.sh
+
+# set to "absent" to delete prompt script
+color_prompt_state: present
+
+# addon string to the prompt (i.e. "dev" or "prod")
+color_prompt_addon: ""
+
+# color schema to use, one of: none, dev, test or prod
+color_prompt_schema: none
