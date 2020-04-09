@@ -78,22 +78,12 @@ if [ -n "$BASH_VERSION" ]; then
 	schema="{{color_prompt_schema}}"
 	addon="{{color_prompt_addon}}"
 	case $schema in
-		none)
-			fg=$Color_Off
-			bg=$Color_Off
+{% for schema, colors in color_prompt_schemas.items() %}
+		{{ schema }})
+			fg=${{ colors.fg }}
+			bg=$On_{{ colors.bg }}
 			;;
-		dev)
-			fg=$BBlack
-			bg=$On_IGreen
-			;;
-		test)
-			fg=$BBlack
-			bg=$On_IYellow
-			;;
-		prod)
-			fg=$IWhite
-			bg=$On_IRed
-			;;
+{% endfor %}
 	esac
 	if [ -z "${addon}" ]; then
 		export PS1="${fg}${bg}[\u@\h \W]\\\${Color_Off} "

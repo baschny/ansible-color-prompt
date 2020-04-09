@@ -49,6 +49,11 @@ See defaults for configuration options when including this role. The main ones a
 A string to include to the prompt to identify the "environment" you are working
 with. I.e. `dev` or `staging` or `upgrade-test`.
 
+`color_prompt_schemas`
+
+A set of default schemas, customize if you want a general different look&feel
+or add your own schemas.
+
 License and inspiration
 ---
 

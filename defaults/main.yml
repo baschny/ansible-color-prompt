@@ -12,3 +12,39 @@ color_prompt_addon: ""
 
 # color schema to use, one of: none, dev, test or prod
 color_prompt_schema: none
+
+# customize the available schemas (globally)
+#
+# Colors:
+# - Color_Off
+# - Black
+# - Red
+# - Green
+# - Yellow
+# - Blue
+# - Purple
+# - Cyan
+# - White
+#
+# In Foreground, available modifiers:
+# - Bold (prefix "B", i.e. "BRed")
+# - Underline (prefix "U")
+# - High Intensity (prefix "I")
+# - Bold High Intensity (prefix "BI")
+#
+# In Background, available prefix:
+# - High Intensity (prefix "I")
+#
+color_prompt_schemas:
+  none:
+    fg: Color_Off
+    bg: Color_Off
+  dev:
+    fg: BBlack
+    bg: IGreen
+  test:
+    fg: BBlack
+    bg: IYellow
+  prod:
+    fg: IWhite
+    bg: IRed
