@@ -86,7 +86,7 @@ if [ -n "$BASH_VERSION" ]; then
 {% endfor %}
 	esac
 	if [ -z "${addon}" ]; then
-		export PS1="${fg}${bg}[\u@\h \W]\\\${Color_Off} "
+		export PS1="${fg}${bg}[\u@\h \W]\\\$${Color_Off} "
 	else
 		export PS1="${fg}${bg}[\u@\h|${addon} \W]\\\$${Color_Off} "
 	fi
