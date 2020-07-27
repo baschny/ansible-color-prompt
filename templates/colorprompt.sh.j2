@@ -1,5 +1,13 @@
 #https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 
+schema="{{ color_prompt_schema }}"
+addon="{{ color_prompt_addon }}"
+
+if [ -r "/etc/color-prompt" ]
+then
+	source "/etc/color-prompt"
+fi
+
 # Reset
 Color_Off='\[\e[0m\]'       # Text Reset
 On_Color_Off='\[\e[0m\]'    # Text Reset
@@ -75,8 +83,6 @@ On_ICyan='\[\e[106m\]'    # Cyan
 On_IWhite='\[\e[107m\]'   # White
 
 if [ -n "$BASH_VERSION" ]; then
-	schema="{{ color_prompt_schema }}"
-	addon="{{ color_prompt_addon }}"
 	case $schema in
 {% for schema, colors in color_prompt_schemas.items() %}
 		{{ schema }})
